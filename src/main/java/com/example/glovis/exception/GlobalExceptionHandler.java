@@ -50,12 +50,12 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return super.handleMissingServletRequestParameter(ex, headers, status, request);
     }
 
-    // TypeMismatch
+    // 400
     @Override
     protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex, HttpHeaders headers, HttpStatus status, WebRequest request) {
-//        return super.handleHttpMessageNotReadable(ex, headers, status, request);
+        return super.handleHttpMessageNotReadable(ex, headers, status, request);
 //        return new ResponseEntity(new ErrorDto(400, "my bad request!!!!"), )HttpStatus.BAD_REQUEST;
-        return new ResponseEntity(new ErrorDto(status.value(), status.name()), HttpStatus.BAD_REQUEST);
+//        return new ResponseEntity(new ErrorDto(status.value(), status.name()), HttpStatus.BAD_REQUEST);
     }
 
 //    @ExceptionHandler( HttpMessageNotReadableException.class )

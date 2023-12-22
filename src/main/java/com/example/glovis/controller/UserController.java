@@ -13,26 +13,26 @@ import com.example.glovis.domain.User;
 import java.io.IOException;
 import java.util.Optional;
 
-@RestController
-@RequiredArgsConstructor
-public class UserController {
-
-    private final UserService userService;
-	
-	@GetMapping(value = "/api/user")
-    public User getUser(){
-        User user = new User();
-        user.setId(1L);
-        user.setName("ahnks");
-        return user;
-    }
-
-    @PostMapping(value = "/api/user")
-    public ResponseEntity<String> postUser(@Validated  @RequestBody String name){
-
-        String result = userService.postUser("no").get();
-        return new ResponseEntity<>(result, null, HttpStatus.OK);
-    }
-
-
-}
+//@RestController
+//@RequiredArgsConstructor
+//public class UserController {
+//
+//    private final UserService userService;
+//
+////	@GetMapping(value = "/api/user")
+////    public User getUser(){
+////        User user = new User();
+////        user.setId(1L);
+////        user.setName("ahnks");
+////        return user;
+////    }
+//
+//    @PostMapping(value = "/api/user")
+//    public ResponseEntity<String> postUser(@Validated  @RequestBody String name){
+//
+//        String result = userService.postUser("no").get();
+//        return new ResponseEntity<>(result, null, HttpStatus.OK);
+//    }
+//
+//
+//}
