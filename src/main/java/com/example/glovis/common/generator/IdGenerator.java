@@ -1,4 +1,4 @@
-package com.example.glovis.config;
+package com.example.glovis.common.generator;
 
 import org.hibernate.HibernateException;
 import org.hibernate.engine.spi.SharedSessionContractImplementor;

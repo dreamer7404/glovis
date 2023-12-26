@@ -14,7 +14,7 @@ public class UserEntity { //implements UserDetails {
 
 	@Id
 	@GeneratedValue(generator = "custom-id")
-	@GenericGenerator(name = "custom-id", strategy = "com.example.glovis.config.IdGenerator")
+	@GenericGenerator(name = "custom-id", strategy = "com.example.glovis.common.generator.IdGenerator")
 	private Long id;
 
 	@Column(nullable = false, unique = true, length = 30)
@@ -26,9 +26,6 @@ public class UserEntity { //implements UserDetails {
 	@Column(length = 100)
 	private String email;
 
-//	public static UserResponse toResponse(UserEntity uerEntity){
-//		return UserMapper.INSTANCE.toResponse(uerEntity);
-//	}
 
 //	@ElementCollection(fetch = FetchType.EAGER)
 //	@Builder.Default
