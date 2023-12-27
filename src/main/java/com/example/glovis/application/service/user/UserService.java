@@ -1,6 +1,6 @@
 package com.example.glovis.application.service.user;
 
-import com.example.glovis.application.domain.User;
+import com.example.glovis.application.domain.user.User;
 import com.example.glovis.application.port.in.user.*;
 import com.example.glovis.application.port.out.user.UserPort;
 import lombok.RequiredArgsConstructor;

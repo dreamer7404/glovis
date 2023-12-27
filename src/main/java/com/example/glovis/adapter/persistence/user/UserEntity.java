@@ -9,7 +9,6 @@ import javax.persistence.*;
 @Setter
 @Entity
 @Table(name="user")
-@RequiredArgsConstructor
 public class UserEntity { //implements UserDetails {
 
 	@Id

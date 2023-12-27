@@ -1,6 +1,6 @@
 package com.example.glovis.adapter.persistence.user;
 
-import com.example.glovis.application.domain.User;
+import com.example.glovis.application.domain.user.User;
 import com.example.glovis.application.port.out.user.UserPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;

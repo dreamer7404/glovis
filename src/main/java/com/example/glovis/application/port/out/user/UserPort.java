@@ -1,6 +1,6 @@
 package com.example.glovis.application.port.out.user;
 
-import com.example.glovis.application.domain.User;
+import com.example.glovis.application.domain.user.User;
 
 import java.util.List;
 

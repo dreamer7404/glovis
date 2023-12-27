@@ -1,4 +1,4 @@
-package com.example.glovis.application.domain;
+package com.example.glovis.application.domain.user;
 
 
 import lombok.*;

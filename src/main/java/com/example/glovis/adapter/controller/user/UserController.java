@@ -1,6 +1,6 @@
 package com.example.glovis.adapter.controller.user;
 
-import com.example.glovis.application.domain.User;
+import com.example.glovis.application.domain.user.User;
 import com.example.glovis.application.port.in.user.*;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
