@@ -12,6 +12,8 @@ import java.util.stream.Collectors;
 @Getter
 @Setter
 public class Menu {
+//    private Long key; // id
+//    private String label; // name
     private Long id;
     private String name;
     private Integer seq;
