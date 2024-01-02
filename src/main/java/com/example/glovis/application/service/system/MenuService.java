@@ -2,7 +2,6 @@ package com.example.glovis.application.service.system;
 
 import com.example.glovis.application.domain.system.Menu;
 import com.example.glovis.application.port.in.system.MenuUseCase;
-import com.example.glovis.application.port.in.user.UserUseCase;
 import com.example.glovis.application.port.out.system.MenuPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

@@ -4,10 +4,7 @@ import com.example.glovis.application.domain.user.User;
 
 import java.util.List;
 
-public interface UserUseCase {
+public interface GetListUserUseCase {
+
     List<User> getList();
-    User get(Long id);
-    void add(User user);
-    void edit(User user);
-    void remove(Long id);
 }

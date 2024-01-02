@@ -1,13 +1,11 @@
-package com.example.glovis.adapter.persistence.system.menu;
+package com.example.glovis.adapter.out.system.menu;
 
-import com.example.glovis.adapter.persistence.user.UserEntity;
 import com.example.glovis.application.domain.system.Menu;
 import com.example.glovis.application.port.out.system.MenuPort;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Repository
 @RequiredArgsConstructor

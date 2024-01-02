@@ -12,9 +12,8 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class UserService implements UserUseCase {//GetUserUseCase , GetListUserUseCase, AddUserUseCase {// , PutUserUseCase, DeleteUserUseCase {
-
-
+public class UserService implements
+        GetUserUseCase, GetListUserUseCase, AddUserUseCase, EditUserUseCase, RemoveUserUseCase {
 
     private final PasswordEncoder passwordEncoder;
     private final UserPort userPort;

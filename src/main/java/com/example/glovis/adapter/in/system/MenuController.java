@@ -1,7 +1,6 @@
-package com.example.glovis.adapter.controller.system;
+package com.example.glovis.adapter.in.system;
 
 import com.example.glovis.application.domain.system.Menu;
-import com.example.glovis.application.domain.user.User;
 import com.example.glovis.application.port.in.system.MenuUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

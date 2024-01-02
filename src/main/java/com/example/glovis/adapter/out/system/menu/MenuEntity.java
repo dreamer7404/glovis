@@ -1,8 +1,7 @@
-package com.example.glovis.adapter.persistence.system.menu;
+package com.example.glovis.adapter.out.system.menu;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
 import java.util.ArrayList;

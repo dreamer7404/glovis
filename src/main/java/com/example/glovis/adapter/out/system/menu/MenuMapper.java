@@ -1,9 +1,8 @@
-package com.example.glovis.adapter.persistence.system.menu;
+package com.example.glovis.adapter.out.system.menu;
 
 import com.example.glovis.application.domain.system.Menu;
 import org.mapstruct.Condition;
 import org.mapstruct.Mapper;
-import org.mapstruct.Mapping;
 import org.mapstruct.ReportingPolicy;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.example.glovis.adapter.persistence.user;
+package com.example.glovis.adapter.out.user;
 
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
@@ -24,6 +24,9 @@ public class UserEntity { //implements UserDetails {
 	private String userName;
 	@Column(length = 100)
 	private String email;
+
+	@Column(length = 10)
+	private String role;
 
 
 //	@ElementCollection(fetch = FetchType.EAGER)

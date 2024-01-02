@@ -1,4 +1,4 @@
-package com.example.glovis.adapter.persistence.user;
+package com.example.glovis.adapter.out.user;
 
 import com.example.glovis.application.domain.user.User;
 import com.example.glovis.application.port.out.user.UserPort;
@@ -10,7 +10,7 @@ import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
-public class UserPersistence implements UserPort {
+public class UserPersistence implements UserPort{
 
     private final UserRepository userRepository;
     private final UserMapper userMapper;
@@ -56,5 +56,9 @@ public class UserPersistence implements UserPort {
         });
     }
 
+    @Override
+    public User get(String userId) {
+        return null;
+    }
 
 }

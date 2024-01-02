@@ -1,6 +1,5 @@
-package com.example.glovis.adapter.persistence.system.menu;
+package com.example.glovis.adapter.out.system.menu;
 
-import com.example.glovis.adapter.persistence.user.UserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

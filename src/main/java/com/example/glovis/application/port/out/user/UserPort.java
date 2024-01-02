@@ -10,4 +10,7 @@ public interface UserPort {
     void add(User user);
     void edit(User user);
     void remove(Long id);
+
+    User get(String userId);
+
 }

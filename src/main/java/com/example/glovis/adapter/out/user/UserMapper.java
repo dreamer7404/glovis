@@ -1,6 +1,7 @@
-package com.example.glovis.adapter.persistence.user;
+package com.example.glovis.adapter.out.user;
 
 import com.example.glovis.application.domain.user.User;
+import com.example.glovis.application.port.in.auth.LoginResponse;
 import org.mapstruct.*;
 
 import java.util.List;
@@ -20,8 +21,6 @@ public interface UserMapper  {
 
     UserEntity toEntity(User user);
 
-
-
-
+    LoginResponse toLoginResponse(User user);
 
 }

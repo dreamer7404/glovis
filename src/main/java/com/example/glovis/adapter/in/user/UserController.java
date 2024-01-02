@@ -1,4 +1,4 @@
-package com.example.glovis.adapter.controller.user;
+package com.example.glovis.adapter.in.user;
 
 import com.example.glovis.application.domain.user.User;
 import com.example.glovis.application.port.in.user.*;
@@ -13,33 +13,39 @@ import java.util.List;
 @RequestMapping(value = "/api/user")
 public class UserController {
 
-    private final UserUseCase userUseCase;
+    private final GetUserUseCase getUserUseCase;
+    private final GetListUserUseCase getListUserUseCase;
+    private final AddUserUseCase addUserUseCase;
+    private final RemoveUserUseCase removeUserUseCase;
+    private final EditUserUseCase editUserUseCase;
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<User> get(@PathVariable Long id){
-        User user =  userUseCase.get(id);
+        User user =  getUserUseCase.get(id);
         return ResponseEntity.ok(user);
     }
 
     @GetMapping(value = "/list")
     public ResponseEntity<List<User>> getList(){
-        List<User> list = userUseCase.getList();
+        List<User> list = getListUserUseCase.getList();
         return ResponseEntity.ok(list);
     }
 
     @PostMapping
     public void add(@RequestBody User user){
-        userUseCase.add(user);
+        addUserUseCase.add(user);
     }
 
     @PutMapping
     public void edit(@RequestBody User user){
-        userUseCase.edit(user);
+        editUserUseCase.edit(user);
     }
 
     @DeleteMapping(value = "/{id}")
     public void remove(@PathVariable Long id){
-        userUseCase.remove(id);
+        removeUserUseCase.remove(id);
     }
+
+
 
 }
