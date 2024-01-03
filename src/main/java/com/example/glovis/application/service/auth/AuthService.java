@@ -22,5 +22,8 @@ public class AuthService implements AuthUseCase {
         user.setToken("thisistoken");
         LoginResponse loginResponse = userMapper.toLoginResponse(user);
         return loginResponse;
+//        return null;
     }
 }
+
+// 43207 매월3일

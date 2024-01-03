@@ -27,5 +27,6 @@ public class AuthController {
 
         LoginResponse loginResponse = authUseCase.getLogin(loginRequest);
         return ResponseEntity.ok(loginResponse);
+//        return null;
     }
 }
