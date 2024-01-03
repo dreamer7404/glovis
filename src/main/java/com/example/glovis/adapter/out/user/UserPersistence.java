@@ -58,7 +58,9 @@ public class UserPersistence implements UserPort{
 
     @Override
     public User get(String userId) {
-        return null;
+
+        UserEntity entity = userRepository.findByUserId(userId).orElse(null);
+        return userMapper.toDomain(entity);
     }
 
 }

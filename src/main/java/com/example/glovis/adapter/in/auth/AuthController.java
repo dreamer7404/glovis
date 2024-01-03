@@ -5,10 +5,13 @@ import com.example.glovis.application.port.in.auth.LoginRequest;
 import com.example.glovis.application.port.in.auth.LoginResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
 
 @RestController
 @RequiredArgsConstructor
@@ -17,7 +20,7 @@ public class AuthController {
 
     private final AuthUseCase authUseCase;
     @PostMapping(value = "/login")
-    public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginRequest){
+    public ResponseEntity<LoginResponse> login(@RequestBody @Valid LoginRequest loginRequest){
 //        User responseUser =  getUserUseCase.get(loginRequest.getUserId());
 //        LoginResponse.builder().userName()
 //        return ResponseEntity.ok(responseUser);

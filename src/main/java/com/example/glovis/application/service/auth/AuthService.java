@@ -19,8 +19,8 @@ public class AuthService implements AuthUseCase {
     @Override
     public LoginResponse getLogin(LoginRequest loginRequest) {
         User user  = userPort.get(loginRequest.getUserId());
+        user.setToken("thisistoken");
         LoginResponse loginResponse = userMapper.toLoginResponse(user);
-        loginResponse.setToken("thisistoken");
         return loginResponse;
     }
 }
