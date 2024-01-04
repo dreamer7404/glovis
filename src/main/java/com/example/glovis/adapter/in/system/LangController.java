@@ -6,6 +6,7 @@ import com.example.glovis.application.port.in.system.MenuUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -21,13 +22,19 @@ import java.util.stream.Collectors;
 public class LangController {
 //    private final MenuUseCase menuUseCase;
 
-    @GetMapping(value = "/json")
-    public ResponseEntity<Map<String, String>> getJson(){
+    @GetMapping(value = "/{natl}")
+    public ResponseEntity<Map<String, String>> getJson(@PathVariable  String natl){
 //        List<Menu> list = menuUseCase.getList();
 //        return ResponseEntity.ok(list);
         List<Json> list = new ArrayList<>();
-        list.add(new Json("BTN_OK", "확인"));
-        list.add(new Json("BTN_CANCEL", "취소"));
+
+        if("ko".equals(natl)) {
+            list.add(new Json("BTN_OK", "확인"));
+            list.add(new Json("BTN_CANCEL", "취소"));
+        }else{
+            list.add(new Json("BTN_OK", "OK"));
+            list.add(new Json("BTN_CANCEL", "CANCEL"));
+        }
 
         Map<String, String> map = list.stream()
                 .collect(Collectors.toMap(
