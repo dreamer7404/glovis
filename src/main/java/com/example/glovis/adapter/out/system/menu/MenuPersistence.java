@@ -10,6 +10,7 @@ import java.util.List;
 @Repository
 @RequiredArgsConstructor
 public class MenuPersistence implements MenuPort {
+
     private final MenuRepository menuRepository;
     private final MenuMapper menuMapper;
     @Override

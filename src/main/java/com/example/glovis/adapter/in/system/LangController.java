@@ -1,14 +1,13 @@
 package com.example.glovis.adapter.in.system;
 
 import com.example.glovis.application.domain.system.Json;
+import com.example.glovis.application.domain.system.Lang;
 import com.example.glovis.application.domain.system.Menu;
+import com.example.glovis.application.port.in.system.LangUseCase;
 import com.example.glovis.application.port.in.system.MenuUseCase;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,28 +19,24 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @RequestMapping(value = "/api/system/lang")
 public class LangController {
-//    private final MenuUseCase menuUseCase;
+    private final LangUseCase langUseCase;
 
     @GetMapping(value = "/{natl}")
-    public ResponseEntity<Map<String, String>> getJson(@PathVariable  String natl){
+    public ResponseEntity<Map<String, String>> getJson(@PathVariable  String natl){//},  @PathVariable List<String> ids){
 //        List<Menu> list = menuUseCase.getList();
 //        return ResponseEntity.ok(list);
-        List<Json> list = new ArrayList<>();
 
-        if("ko".equals(natl)) {
-            list.add(new Json("BTN_OK", "확인"));
-            list.add(new Json("BTN_CANCEL", "취소"));
-        }else{
-            list.add(new Json("BTN_OK", "OK"));
-            list.add(new Json("BTN_CANCEL", "CANCEL"));
+        List<Lang> langList = langUseCase.getList(natl);
+
+        List<Json> list = new ArrayList<>();
+        for (Lang lang : langList){
+            list.add(new Json(lang.getCode(), lang.getLabel()));
         }
 
         Map<String, String> map = list.stream()
                 .collect(Collectors.toMap(
-//                    Lang::getValue,
-//                    Lang::getName
-                        i1 -> i1.getValue(),
-                        i2 -> i2.getName()
+                        Json::getValue,
+                        Json::getName
                 ));
         return ResponseEntity.ok(map);
     }
